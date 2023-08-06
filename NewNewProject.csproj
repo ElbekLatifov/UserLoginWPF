@@ -13,6 +13,7 @@
     <None Remove="Pages\eye close.png" />
     <None Remove="Pages\eye open.png" />
     <None Remove="Pages\power.png" />
+    <None Remove="timer4.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +26,7 @@
     <Resource Include="Pages\eye close.png" />
     <Resource Include="Pages\eye open.png" />
     <Resource Include="Pages\power.png" />
+    <Resource Include="Pages\timer4.png" />
   </ItemGroup>
 
   <ItemGroup>
