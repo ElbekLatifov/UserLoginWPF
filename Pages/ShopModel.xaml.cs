@@ -70,13 +70,14 @@ namespace NewNewProject.Pages
             var query = new ShopSqlQuerys();
 
             query.DeleteShop((int)hh);
+
         }
 
         private void update_Click(object sender, RoutedEventArgs e)
         {
-            //var hh = id.Content;
-            //var link = new UpdateWindow((int)hh);
-            //link.Show();
+            var hh = id.Content;
+            var link = new UpdateWindow((int)hh);
+            link.Show();
         }
     }
 }

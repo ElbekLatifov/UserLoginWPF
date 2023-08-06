@@ -11,6 +11,9 @@
         WindowStyle="None"
         Background="Transparent">
     <Grid>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Top" Background="Aqua" Height="30" Width="850">
+            <Button Content="Exit" Click="Page1_Click" Height="30" Width="50" HorizontalAlignment="Right" Background="red"/>
+        </StackPanel>
+        <Frame x:Name="mainframe" Margin="0,30,0,0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

@@ -12,11 +12,11 @@
             <ColumnDefinition Width="689*"/>
             <ColumnDefinition Width="111*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="label_name" Content="Title" HorizontalAlignment="Left" Height="30" Margin="52,0,0,0" VerticalAlignment="Center" Width="137"/>
-        <Label x:Name="label_description" Content="Description" HorizontalAlignment="Left" Height="30" Margin="212,0,0,0" VerticalAlignment="Center" Width="192"/>
-        <Label x:Name="id" Content="Id" HorizontalAlignment="Left" Height="30" Margin="10,0,0,0" VerticalAlignment="Center" Width="28"/>
-        <Button x:Name="DeleteButton" Grid.Column="1" Content="Delete" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="-0.604,0.064" Width="44" Height="30" Cursor="No" AllowDrop="True" Click="delete_button"/>
-        <Button x:Name="update" Content="Update" HorizontalAlignment="Left" Margin="435,0,5,0" VerticalAlignment="Center" Width="44" Height="30" Grid.ColumnSpan="2" Click="update_Click"/>
+        <Label x:Name="label_name" Content="Title" HorizontalAlignment="Left" Height="30" Margin="52,0,0,0" VerticalAlignment="Center" Width="137" FontFamily="Wide Latin"/>
+        <Label x:Name="label_description" Content="Description" FontStyle="Italic" HorizontalAlignment="Left" Height="30" Margin="212,0,0,0" VerticalAlignment="Center" Width="192" FontFamily="Bauhaus 93"/>
+        <Label x:Name="id" Content="Id" HorizontalAlignment="Left" Height="30" Margin="10,0,0,0" VerticalAlignment="Center" Width="28" FontFamily="Algerian" FontWeight="Bold"/>
+        <Button x:Name="DeleteButton" Background="red" Grid.Column="1" Content="Delete" Foreground="Aqua" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="-0.604,0.064" Width="44" Height="30" Cursor="No" AllowDrop="True" Click="delete_button"/>
+        <Button x:Name="update" Background="blue" Content="Update" Foreground="White" HorizontalAlignment="Left" Margin="435,0,5,0" VerticalAlignment="Center" Width="44" Height="30" Grid.ColumnSpan="2" Click="update_Click"/>
 
     </Grid>
 </UserControl>

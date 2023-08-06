@@ -1,4 +1,5 @@
-﻿using NewNewProject.Managers;
+﻿using Microsoft.Win32;
+using NewNewProject.Managers;
 using NewNewProject.Models;
 using System;
 using System.Collections.Generic;
@@ -68,7 +69,7 @@ namespace NewNewProject.Pages
             {
                 ShopModel shopModel = new ShopModel();
 
-                shopModel.Width = shoplists.ActualWidth - 10;
+                shopModel.Width = shoplists.ActualWidth-10;
                 shopModel.Height = 50;
                 shopModel.labelcha0 = shop.Id;
                 shopModel.labelcha1 = shop.Title;
@@ -116,13 +117,30 @@ namespace NewNewProject.Pages
             shoplists.ItemsSource = shopModels;
         }
 
-        private void ShopsPage_Loaded_1(object sender, RoutedEventArgs e)
+        public void ShopsPage_Loaded_1(object sender, RoutedEventArgs e)
         {
             var sources = new List<Enum>()
-            { Profesion.Natural, Profesion.XozMag, Profesion.Clothes, Profesion.Technical, Profesion.Food, Profesion.Dori};
+            { Profesion.Natural, Profesion.HouseholdUtensils, Profesion.Clothes, Profesion.Technical, Profesion.Food, Profesion.Medicine};
             sort_by_description.ItemsSource = sources;
             sort_by_description.Text = "Sort by description";
             read_btn_Click(sender, e);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image files|*.png;*jpg;.bmp";
+            openFileDialog.FilterIndex = 1;
+            
+            if(openFileDialog.ShowDialog() == true) 
+            { 
+                PersonalImage.Source = new BitmapImage(new Uri(openFileDialog.FileName));   
+            }
+        }
+
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }

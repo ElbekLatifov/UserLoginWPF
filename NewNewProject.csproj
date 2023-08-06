@@ -8,8 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Pages\backpng.png" />
     <None Remove="Pages\eye close.png" />
     <None Remove="Pages\eye open.png" />
+    <None Remove="Pages\power.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,8 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Pages\backpng.png" />
     <Resource Include="Pages\eye close.png" />
     <Resource Include="Pages\eye open.png" />
+    <Resource Include="Pages\power.png" />
   </ItemGroup>
 
   <ItemGroup>

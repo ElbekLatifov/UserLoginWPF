@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NewNewProject.Managers;
+using NewNewProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,25 @@ namespace NewNewProject.Pages
         public CreateControl()
         {
             InitializeComponent();
+        }
+
+        private void add_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var shopName = add_txt.Text;
+            int description = (int)description_combo.SelectedItem;
+
+            var query = new ShopSqlQuerys();
+
+            if (shopName.Length == 0 || (description < 0 || description > 6)) { MessageBox.Show("Fill places"); return; }
+
+            query.CreateShop(shopName, description);
+        }
+
+        private void createModel_Loaded(object sender, RoutedEventArgs e)
+        {
+            var items = new List<Enum>() { Profesion.Natural, Profesion.HouseholdUtensils, Profesion.Clothes, Profesion.Technical, Profesion.Medicine, Profesion.Food };
+            description_combo.ItemsSource = items;
+            description_combo.Text = "Description";
         }
     }
 }

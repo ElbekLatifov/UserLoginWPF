@@ -16,10 +16,10 @@ namespace NewNewProject.Models
     public enum Profesion
     {
         Food,
-        XozMag,
+        HouseholdUtensils,
         Clothes,
         Technical,
         Natural,
-        Dori
+        Medicine
     }
 }

@@ -24,7 +24,12 @@ namespace NewNewProject
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new MainMenuPage());
+            mainframe.Navigate(new MainMenuPage());
+        }
+
+        private void Page1_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

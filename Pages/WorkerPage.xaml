@@ -14,7 +14,7 @@
             <ColumnDefinition Width="1.8*"/>
         </Grid.ColumnDefinitions>
 
-        <Border CornerRadius="20,0,0,20" >
+        <Border CornerRadius="0,0,0,0" >
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="#3AA9AD" Offset="0"/>
@@ -28,20 +28,23 @@
                     <Ellipse Margin="100,350,450,0" Fill="#4EB1B6" Width="40" Height="40"/>
                 </Canvas>
                 <StackPanel>
-                    <Image Width="200" Height="200" Margin="50, 30, 50, 0" Stretch="Fill"/>
+                    <Image Height="30" Width="30" HorizontalAlignment="Left" Source="/Pages/backpng.png" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                    <Image x:Name="PersonalImage" Width="200" Height="198" Margin="50, 0, 50, 0" Stretch="Fill"/>
+                    <Button Background="#3AA9AD" Content="Click here for select image" Width="160" Click="Button_Click"/>
                     <Button x:Name="read_btn" Content="Read" Width="200" Height="50" Margin="50,20,50,0" Click="read_btn_Click"/>
                     <Button x:Name="create_btn" Content="Create" Width="200" Height="50" Margin="50,20,50,0" Click="create_btn_Click"/>
+
                 </StackPanel>
             </Grid>
         </Border>
 
-        <Border Background="#ffffff" Grid.Column="1" CornerRadius="0,20,20,0">
+        <Border Background="#ffffff" Grid.Column="1" CornerRadius="0,0,20,20">
 
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Top" >
                     <ComboBox x:Name="sort_by_description" HorizontalAlignment="Left" Margin="5 0" Height="30" Width="150" SelectionChanged="sort_by_description_Selected"/>
                     <TextBox x:Name="search_txt" Width="300" Height="30" Margin="5 0"/>
-                    <Button x:Name="search_btn" Width="50" Height="30" Content="Search" FontSize="15" Click="search_btn_Click"/>
+                    <Button x:Name="search_btn" Width="65" Height="30" Content="Search" FontSize="15" Click="search_btn_Click"/>
                 </StackPanel>
 
                 <ListBox x:Name="shoplists" Height="550"/>

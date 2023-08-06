@@ -1,6 +1,9 @@
-﻿using System;
+﻿using NewNewProject.Managers;
+using NewNewProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,9 +22,38 @@ namespace NewNewProject.Pages
     /// </summary>
     public partial class UpdateWindow : Window
     {
-        public UpdateWindow()
+        private int _id;
+        public UpdateWindow(int id)
         {
             InitializeComponent();
+            _id = id;
+        }
+
+        private void update_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var shopName = add_txt.Text;
+            int description = (int)description_combo.SelectedItem;
+
+            var query = new ShopSqlQuerys();
+
+            if (shopName.Length == 0) { MessageBox.Show("Fill places"); return; }
+
+            try
+            {
+                query.UpdateShop(_id, shopName, description);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void updateWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            var sources = new List<Enum>()
+            { Profesion.Natural, Profesion.HouseholdUtensils, Profesion.Clothes, Profesion.Technical, Profesion.Food, Profesion.Medicine};
+            description_combo.ItemsSource = sources;
         }
     }
 }
