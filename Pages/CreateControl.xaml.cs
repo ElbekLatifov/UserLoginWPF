@@ -34,9 +34,10 @@ namespace NewNewProject.Pages
 
             var query = new ShopSqlQuerys();
 
-            if (shopName.Length == 0) { MessageBox.Show("Fill places"); return; }
+            if (shopName.Length == 0) { MessageBox.Show("Fill in the required fields"); return; }
+            var owner = Properties.Settings.Default.Name;
 
-            query.CreateShop(shopName, description);
+            query.CreateShop(shopName, description, owner);
         }
 
         private void createModel_Loaded(object sender, RoutedEventArgs e)

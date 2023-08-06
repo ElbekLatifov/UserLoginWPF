@@ -31,14 +31,14 @@ namespace NewNewProject.Pages
         private void read_btn_Click(object sender, RoutedEventArgs e)
         {
             var query = new ShopSqlQuerys();
-
+            var owner = Properties.Settings.Default.Name;
             List<ShopModel> shopModels = new List<ShopModel>();
 
             var shops = query.GetShops();
 
             foreach (var shop in shops)
             {
-                ShopModel shopModel = new ShopModel();
+                ShopModel shopModel = new ShopModel(owner == shop.OwnerName);
 
                 shopModel.Width = shoplists.ActualWidth - 10;
                 shopModel.Height = 50;
@@ -141,6 +141,29 @@ namespace NewNewProject.Pages
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        private void myshops_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var query = new ShopSqlQuerys();
+            var owner = Properties.Settings.Default.Name;
+            List<ShopModel> shopModels = new List<ShopModel>();
+
+            var shops = query.MyShops(owner);
+
+            foreach (var shop in shops)
+            {
+                ShopModel shopModel = new ShopModel(true);
+
+                shopModel.Width = shoplists.ActualWidth - 10;
+                shopModel.Height = 50;
+                shopModel.labelcha0 = shop.Id;
+                shopModel.labelcha1 = shop.Title;
+                shopModel.labelcha2 = shop.Description;
+                shopModels.Add(shopModel);
+            }
+
+            shoplists.ItemsSource = shopModels;
         }
     }
 }

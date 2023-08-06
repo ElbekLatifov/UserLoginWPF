@@ -66,6 +66,12 @@ namespace NewNewProject.Pages
                             Properties.Settings.Default.RememberMe = true;
                             Properties.Settings.Default.Save();
                         }
+                        else
+                        {
+                            Properties.Settings.Default.Password = password;
+                            Properties.Settings.Default.Name = username;
+                            Properties.Settings.Default.Save();
+                        }
                         MainPage.NavigationService.Navigate(new WorkerPage());
                     }
                     else

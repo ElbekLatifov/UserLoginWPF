@@ -31,8 +31,9 @@
                     <Image Height="30" Width="30" HorizontalAlignment="Left" Source="/Pages/backpng.png" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
                     <Image x:Name="PersonalImage" Width="200" Height="198" Margin="50, 0, 50, 0" Stretch="Fill"/>
                     <Button Background="#3AA9AD" Content="Click here for select image" Width="160" Click="Button_Click" FontFamily="Bodoni MT Condensed" FontSize="14" BorderBrush="#FF3AA9AD"/>
-                    <Button x:Name="read_btn" Background="#3AA9AD" HorizontalAlignment="Center" Content="Read" Width="300" Height="50" Margin="50,20,50,0" Click="read_btn_Click" FontFamily="Algerian" FontSize="36"/>
-                    <Button x:Name="create_btn" Background="#3AA9AD" HorizontalAlignment="Center" Content="Create" Width="300" Height="50" Margin="50,20,50,0" Click="create_btn_Click" FontFamily="Algerian" FontSize="36"/>
+                    <Button x:Name="personal_read_btn" Background="#3AA9AD" HorizontalAlignment="Center" Content="My Shops" Width="300" Height="50" Margin="50,20,50,0" Click="myshops_btn_Click" FontFamily="Algerian" FontSize="36"/>
+                    <Button x:Name="read_btn" Background="#3AA9AD" HorizontalAlignment="Center" Content="See Shops" Width="300" Height="50" Margin="50,20,50,0" Click="read_btn_Click" FontFamily="Algerian" FontSize="36"/>
+                    <Button x:Name="create_btn" Background="#3AA9AD" HorizontalAlignment="Center" Content="Add Shop" Width="300" Height="50" Margin="50,20,50,0" Click="create_btn_Click" FontFamily="Algerian" FontSize="36"/>
 
                 </StackPanel>
             </Grid>

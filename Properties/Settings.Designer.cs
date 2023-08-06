@@ -58,5 +58,17 @@ namespace NewNewProject.Properties {
                 this["RememberMe"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Gost {
+            get {
+                return ((string)(this["Gost"]));
+            }
+            set {
+                this["Gost"] = value;
+            }
+        }
     }
 }

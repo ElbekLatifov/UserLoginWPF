@@ -11,6 +11,7 @@ namespace NewNewProject.Models
         public int Id { get; set; } 
         public string Title { get; set; }
         public Profesion Description { get; set; }
+        public string OwnerName { get; set; }
     }
 
     public enum Profesion

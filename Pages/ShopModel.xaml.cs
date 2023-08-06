@@ -21,9 +21,10 @@ namespace NewNewProject.Pages
     /// </summary>
     public partial class ShopModel : UserControl
     {
-        public ShopModel()
+        public ShopModel(bool isowner = false)
         {
             InitializeComponent();
+            IsOwner(isowner);
         }
 
         public object labelcha0
@@ -62,6 +63,14 @@ namespace NewNewProject.Pages
             }
         }
 
+        private void IsOwner(bool isowner)
+        {
+            if (!isowner)
+            {
+                DeleteButton.Visibility = Visibility.Hidden;
+                update.Visibility = Visibility.Hidden;
+            }
+        }
 
         private void delete_button(object sender, RoutedEventArgs e)
         {

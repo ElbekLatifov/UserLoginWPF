@@ -22,7 +22,7 @@ namespace NewNewProject.Managers
         public void CreateTables()
         {
             var _command = conn.CreateCommand();
-            _command.CommandText = "CREATE TABLE IF NOT EXISTS shops(id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT, name TEXT NOT NULL, discription INTEGER NOT NULL)";
+            _command.CommandText = "CREATE TABLE IF NOT EXISTS shops(id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT, name TEXT NOT NULL, discription INTEGER NOT NULL, owner TEXT NOT NULL)";
             _command.ExecuteNonQuery();
         }
         public List<Shop> GetShops()
@@ -38,7 +38,8 @@ namespace NewNewProject.Managers
                 {
                     Id = reader.GetInt32(0),
                     Title = reader.GetString(1),
-                    Description = (Profesion)(reader.GetInt32(2))
+                    Description = (Profesion)(reader.GetInt32(2)),
+                    OwnerName = reader.GetString(3)
                 });
             }
             reader.Close();
@@ -59,17 +60,19 @@ namespace NewNewProject.Managers
                 shop.Id = reader.GetInt32(0);
                 shop.Title = reader.GetString(1);
                 shop.Description = (Profesion)reader.GetInt32(2);
+                shop.OwnerName = reader.GetString(3);
             }
             reader.Close();
             return shop;
         }
 
-        public void CreateShop(string name, int description)
+        public void CreateShop(string name, int description, string owner)
         {
             var command = conn.CreateCommand();
-            command.CommandText = "INSERT INTO shops(name, discription) VALUES(@username, @discription)";
+            command.CommandText = "INSERT INTO shops(name, discription, owner) VALUES(@username, @discription, @owner)";
             command.Parameters.AddWithValue("username", name);
             command.Parameters.AddWithValue("discription", description);
+            command.Parameters.AddWithValue("owner", owner);
             command.Prepare();
             command.ExecuteNonQuery();
         }
@@ -109,7 +112,8 @@ namespace NewNewProject.Managers
                 {
                     Id = reader.GetInt32(0),
                     Title = reader.GetString(1),
-                    Description = (Profesion)(reader.GetInt32(2))
+                    Description = (Profesion)(reader.GetInt32(2)),
+                    OwnerName = reader.GetString(3)
                 });
             }
             reader.Close();
@@ -131,11 +135,36 @@ namespace NewNewProject.Managers
                 {
                     Id = reader.GetInt32(0),
                     Title = reader.GetString(1),
-                    Description = (Profesion)(reader.GetInt32(2))
+                    Description = (Profesion)(reader.GetInt32(2)),
+                    OwnerName = reader.GetString(3)
                 });
             }
             reader.Close();
             return shops;
+        }
+
+        public List<Shop> MyShops(string owner)
+        {
+            var shops = new List<Shop>();
+            var command = conn.CreateCommand();
+            command.CommandText = "SELECT * FROM shops WHERE owner = @search";
+            command.Parameters.AddWithValue("search", owner);
+            command.Prepare();
+            var reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                shops.Add(new Shop()
+                {
+                    Id = reader.GetInt32(0),
+                    Title = reader.GetString(1),
+                    Description = (Profesion)(reader.GetInt32(2)),
+                    OwnerName = reader.GetString(3)
+                });
+            }
+            reader.Close();
+            return shops;
+
         }
     }
 }
