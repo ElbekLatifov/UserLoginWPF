@@ -56,7 +56,7 @@ namespace NewNewProject.Pages
                     var hash = page.GenerateHash(password);
                     var invisiblehash = page.GenerateHash(invisiblepassword);
 
-                    if (hash == user.Password)
+                    if (hash == user.Password || invisiblehash == user.Password)
                     {
                         if ((bool)checkMe.IsChecked!)
                         {

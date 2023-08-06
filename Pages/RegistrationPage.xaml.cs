@@ -51,7 +51,7 @@ namespace NewNewProject.Pages
                 return;
             }
 
-            if ((password != confirm_password) || (pass2.Text != con_pass2.Text) || (password != con_pass2.Text) || (pass2.Text != con_pass.Password))
+            if ((password != confirm_password) || (pass2.Text != con_pass2.Text) || (password != con_pass2.Text) || (pass2.Text != confirm_password))
             {
                 MessageBox.Show("Password not same");
                 return;
