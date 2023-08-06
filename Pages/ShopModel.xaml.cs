@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewNewProject.Managers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,59 @@ namespace NewNewProject.Pages
         public ShopModel()
         {
             InitializeComponent();
+        }
+
+        public object labelcha0
+        {
+            get
+            {
+                return id.Content;
+            }
+            set
+            {
+                id.Content = value;
+            }
+        }
+
+        public object labelcha1
+        {
+            get
+            {
+                return label_name.Content;
+            }
+            set
+            {
+                label_name.Content = value;
+            }
+        }
+
+        public object labelcha2
+        {
+            get
+            {
+                return label_description.Content;
+            }
+            set
+            {
+                label_description.Content = value;
+            }
+        }
+
+
+        private void delete_button(object sender, RoutedEventArgs e)
+        {
+            var hh = id.Content;
+
+            var query = new ShopSqlQuerys();
+
+            query.DeleteShop((int)hh);
+        }
+
+        private void update_Click(object sender, RoutedEventArgs e)
+        {
+            //var hh = id.Content;
+            //var link = new UpdateWindow((int)hh);
+            //link.Show();
         }
     }
 }

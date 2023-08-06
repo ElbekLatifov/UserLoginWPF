@@ -6,10 +6,47 @@
       xmlns:local="clr-namespace:NewNewProject.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="850"
-      Title="WorkerPage"
-      Background="Aqua">
+      Title="WorkerPage" Loaded="ShopsPage_Loaded_1">
 
     <Grid>
-        <Button x:Name="goMain" Content="GoBackMain" Width="300" Height="60" Click="goMain_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.8*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border CornerRadius="20,0,0,20" >
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#3AA9AD" Offset="0"/>
+                    <GradientStop Color="#3AADA1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Canvas>
+                    <Polygon Points="0,20 230,140 0,270" Fill="#4EB1B6"/>
+                    <Polygon Points="300,450  150,500 300,550" Fill="#4EB1B6"/>
+                    <Ellipse Margin="100,350,450,0" Fill="#4EB1B6" Width="40" Height="40"/>
+                </Canvas>
+                <StackPanel>
+                    <Image Width="200" Height="200" Margin="50, 30, 50, 0" Stretch="Fill"/>
+                    <Button x:Name="read_btn" Content="Read" Width="200" Height="50" Margin="50,20,50,0" Click="read_btn_Click"/>
+                    <Button x:Name="create_btn" Content="Create" Width="200" Height="50" Margin="50,20,50,0" Click="create_btn_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Background="#ffffff" Grid.Column="1" CornerRadius="0,20,20,0">
+
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Top" >
+                    <ComboBox x:Name="sort_by_description" HorizontalAlignment="Left" Margin="5 0" Height="30" Width="150" SelectionChanged="sort_by_description_Selected"/>
+                    <TextBox x:Name="search_txt" Width="300" Height="30" Margin="5 0"/>
+                    <Button x:Name="search_btn" Width="50" Height="30" Content="Search" FontSize="15" Click="search_btn_Click"/>
+                </StackPanel>
+
+                <ListBox x:Name="shoplists" Height="550"/>
+            </StackPanel>
+
+        </Border>
     </Grid>
 </Page>
