@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Pages\1920_1080_201211031216211177368.jpeg" />
     <None Remove="Pages\backpng.png" />
     <None Remove="Pages\eye close.png" />
     <None Remove="Pages\eye open.png" />
@@ -19,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Pages\1920_1080_201211031216211177368.jpeg" />
     <Resource Include="Pages\backpng.png" />
     <Resource Include="Pages\eye close.png" />
     <Resource Include="Pages\eye open.png" />

@@ -10,7 +10,7 @@
       >
 
     <Grid>
-        <Border Background="White" CornerRadius="0"/>
+        <Border Background="White" CornerRadius="0" Cursor="Hand"/>
         <Label Content="Login" HorizontalAlignment="Left" Width="160" Height="40" VerticalAlignment="Top" Margin="60,170,0,0" FontSize="20" Padding="50,0,0,0"/>
         <Label Content="Password" HorizontalAlignment="Left" Width="160" Height="40" VerticalAlignment="Top" Margin="60,240,0,0" FontSize="20" Padding="50,0,0,0"/>
         <TextBox x:Name="parol_tx" HorizontalAlignment="Left" Height="50" Margin="227,233,0,0" VerticalAlignment="Top" Width="410" MaxLength="20" FontSize="38" FontFamily="Times New Roman"/>
@@ -23,7 +23,7 @@
         <TextBox x:Name="register_txt" HorizontalAlignment="Left" Margin="226,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="50" FontSize="38" FontFamily="Times New Roman" HorizontalContentAlignment="Left"/>
         <Button x:Name="enter_btn" Content="Enter" Background="Lime" HorizontalAlignment="Left" Height="73" Margin="275,341,0,0" VerticalAlignment="Top" Width="310" FontSize="48" BorderBrush="#FF26F9FA" Click="enter_btn_Click" FontFamily="Snap ITC" >
         </Button>
-        <Button Content="Registration" HorizontalAlignment="Center" Background="White"  Margin="0,512,0,0" VerticalAlignment="Top" Width="158" Height="35" FontSize="24" Click="Button_Click" FontFamily="Blackadder ITC"/>
+        <Button Content="Registration" HorizontalAlignment="Center" Background="White"  Margin="0,512,0,0" VerticalAlignment="Top" Width="158" Height="35" FontSize="24" Click="Button_Click" FontFamily="Blackadder ITC" BorderBrush="White"/>
         <CheckBox x:Name="checkMe" Content="Remember me" HorizontalAlignment="Left" Height="21" Margin="227,300,0,0" VerticalAlignment="Top" Width="99"/>
         <Image x:Name="eye" HorizontalAlignment="Left" Height="31" Margin="597,242,0,0" VerticalAlignment="Top" Width="36" Source="/Pages/eye open.png" Stretch="Fill" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
     </Grid>

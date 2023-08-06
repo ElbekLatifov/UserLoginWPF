@@ -7,11 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="250" d:DesignWidth="400" Loaded="createModel_Loaded">
     <Grid Background="#ffffff">
-        <TextBox x:Name="add_txt" HorizontalAlignment="Center" Margin="1,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="45" FontSize="26"/>
+        <TextBox x:Name="add_txt" HorizontalAlignment="Center" Margin="1,31,0,0"  VerticalAlignment="Top" Width="300" Height="45" FontSize="26" Cursor="Pen"/>
         <Label Content="Shop name:" FontSize="8" HorizontalAlignment="Left" Height="20" Margin="50,10,0,0" VerticalAlignment="Top" Width="87"/>
         <Label Content="Description:" FontSize="8" HorizontalAlignment="Left" Height="20" Margin="50,80,0,0" VerticalAlignment="Top" Width="87"/>
         <ComboBox x:Name="description_combo" HorizontalAlignment="Center" Height="40" Margin="1,100,0,0" VerticalAlignment="Top" Width="300"/>
-        <Button x:Name="add_btn" Background="green" Content="Add" Foreground="Azure" FontSize="20" HorizontalAlignment="Center" Margin="1,165,0,0" VerticalAlignment="Top" Height="50" Width="300" Click="add_btn_Click"/>
+        <Button x:Name="add_btn" Background="green" Content="Add" Foreground="Azure" FontSize="22" HorizontalAlignment="Center" Margin="1,165,0,0" VerticalAlignment="Top" Height="50" Width="300" Click="add_btn_Click" FontFamily="Broadway"/>
 
     </Grid>
 </UserControl>

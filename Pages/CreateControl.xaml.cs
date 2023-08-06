@@ -34,7 +34,7 @@ namespace NewNewProject.Pages
 
             var query = new ShopSqlQuerys();
 
-            if (shopName.Length == 0 || (description < 0 || description > 6)) { MessageBox.Show("Fill places"); return; }
+            if (shopName.Length == 0) { MessageBox.Show("Fill places"); return; }
 
             query.CreateShop(shopName, description);
         }
