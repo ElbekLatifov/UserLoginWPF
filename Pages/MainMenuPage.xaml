@@ -13,8 +13,8 @@
         <Border Background="White" CornerRadius="0" Cursor="Hand"/>
         <Label Content="Login" HorizontalAlignment="Left" Width="160" Height="40" VerticalAlignment="Top" Margin="60,170,0,0" FontSize="20" Padding="50,0,0,0"/>
         <Label Content="Password" HorizontalAlignment="Left" Width="160" Height="40" VerticalAlignment="Top" Margin="60,240,0,0" FontSize="20" Padding="50,0,0,0"/>
-        <TextBox x:Name="parol_tx" HorizontalAlignment="Left" Height="50" Margin="227,233,0,0" VerticalAlignment="Top" Width="410" MaxLength="20" FontSize="38" FontFamily="Times New Roman"/>
-        <PasswordBox x:Name="parol_txt" HorizontalAlignment="Left" Height="50" Margin="227,233,0,0" VerticalAlignment="Top" Width="410" PasswordChar="*" MaxLength="20" FontSize="36"/>
+        <TextBox x:Name="parol_tx" HorizontalAlignment="Left" Height="50" Margin="227,233,0,0" VerticalAlignment="Top" Width="410" MaxLength="20" FontSize="38" FontFamily="Times New Roman" TextChanged="parol_tx_TextChanged"/>
+        <PasswordBox x:Name="parol_txt" HorizontalAlignment="Left" Height="50" Margin="227,233,0,0" VerticalAlignment="Top" Width="410" PasswordChar="*" MaxLength="20" FontSize="36" AllowDrop="True" IsVisibleChanged="parol_txt_IsVisibleChanged"/>
         <Label Content="Welcome" HorizontalAlignment="Left" Height="57" Margin="327,77,0,0" VerticalAlignment="Top" Width="215" Background="#FF50C87A" FontSize="36" HorizontalContentAlignment="Center" FontFamily="Tempus Sans ITC" >
             <Label.Effect>
                 <DropShadowEffect/>

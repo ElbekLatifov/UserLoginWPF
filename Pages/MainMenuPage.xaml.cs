@@ -22,6 +22,7 @@ namespace NewNewProject.Pages
     public partial class MainMenuPage : Page
     {
         private int eye_counter = 0;
+        private string password_change = string.Empty;
 
         public MainMenuPage()
         {
@@ -93,7 +94,6 @@ namespace NewNewProject.Pages
             {
                 parol_tx.Visibility = Visibility.Visible;
                 parol_txt.Visibility = Visibility.Hidden;
-                parol_tx.Text = parol_txt.Password;
                 eye.Source =
                     new BitmapImage(new Uri("/Pages/eye close.png", UriKind.Relative));
                 eye_counter = 1;
@@ -102,7 +102,6 @@ namespace NewNewProject.Pages
             {
                 parol_tx.Visibility = Visibility.Hidden;
                 parol_txt.Visibility = Visibility.Visible;
-                parol_txt.Password = parol_tx.Text;
                 eye.Source =
                     new BitmapImage(new Uri("/Pages/eye open.png", UriKind.Relative));
                 eye_counter = 2;
@@ -115,6 +114,19 @@ namespace NewNewProject.Pages
             {
                 register_txt.Text = Properties.Settings.Default.Name;
                 parol_txt.Password = Properties.Settings.Default.Password;
+            }
+        }
+
+        private void parol_tx_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            parol_txt.Password = parol_tx.Text;
+        }
+
+        private void parol_txt_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if(!parol_txt.IsVisible)
+            {
+                parol_tx.Text = parol_txt.Password;
             }
         }
     }

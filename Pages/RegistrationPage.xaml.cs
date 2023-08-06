@@ -51,7 +51,7 @@ namespace NewNewProject.Pages
                 return;
             }
 
-            if ((password != confirm_password) || (pass2.Text != con_pass2.Text) || (password != con_pass2.Text) || (pass2.Text != confirm_password))
+            if ((password != confirm_password))
             {
                 MessageBox.Show("Password not same");
                 return;
@@ -100,7 +100,6 @@ namespace NewNewProject.Pages
             {
                 pass2.Visibility = Visibility.Visible;
                 pass.Visibility = Visibility.Hidden;
-                pass2.Text = pass.Password;
                 pass_name.Source =
                     new BitmapImage(new Uri("/Pages/eye close.png", UriKind.Relative));
                 eye_counter = 1;
@@ -109,7 +108,6 @@ namespace NewNewProject.Pages
             {
                 pass2.Visibility = Visibility.Hidden;
                 pass.Visibility = Visibility.Visible;
-                pass.Password = pass2.Text;
                 pass_name.Source =
                     new BitmapImage(new Uri("/Pages/eye open.png", UriKind.Relative));
                 eye_counter = 2;
@@ -126,7 +124,6 @@ namespace NewNewProject.Pages
             {
                 con_pass2.Visibility = Visibility.Visible;
                 con_pass.Visibility = Visibility.Hidden;
-                con_pass2.Text = con_pass.Password;
                 conpassname.Source =
                     new BitmapImage(new Uri("/Pages/eye close.png", UriKind.Relative));
                 eye_counter2 = 1;
@@ -135,10 +132,35 @@ namespace NewNewProject.Pages
             {
                 con_pass2.Visibility = Visibility.Hidden;
                 con_pass.Visibility = Visibility.Visible;
-                con_pass.Password = con_pass2.Text;
                 conpassname.Source =
                     new BitmapImage(new Uri("/Pages/eye open.png", UriKind.Relative));
                 eye_counter2 = 2;
+            }
+        }
+
+        private void pass2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            pass.Password = pass2.Text;
+        }
+
+        private void con_pass2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            con_pass.Password = con_pass2.Text;
+        }
+
+        private void pass_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if(!pass.IsVisible)
+            {
+                pass2.Text = pass.Password;
+            }
+        }
+
+        private void con_pass_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (!con_pass.IsVisible)
+            {
+                con_pass2.Text = con_pass.Password;
             }
         }
     }
