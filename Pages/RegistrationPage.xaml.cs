@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Windows.Media.Imaging;
+using System.Windows.Input;
 
 namespace NewNewProject.Pages
 {
@@ -162,6 +163,36 @@ namespace NewNewProject.Pages
             {
                 con_pass2.Text = con_pass.Password;
             }
+        }
+
+        private void login_txt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!(e.Key >= Key.D0 && e.Key <= Key.D9 ||
+                e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9 ||
+                e.Key >= Key.A && e.Key <= Key.Z))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void pass_KeyDown(object sender, KeyEventArgs e)
+        {
+            login_txt_KeyDown(sender, e);
+        }
+
+        private void con_pass_KeyDown(object sender, KeyEventArgs e)
+        {
+            login_txt_KeyDown(sender, e);
+        }
+
+        private void pass2_KeyDown(object sender, KeyEventArgs e)
+        {
+            login_txt_KeyDown(sender, e);
+        }
+
+        private void con_pass2_KeyDown(object sender, KeyEventArgs e)
+        {
+            login_txt_KeyDown(sender, e);
         }
     }
 }
