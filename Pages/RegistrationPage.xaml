@@ -11,11 +11,11 @@
 
     <Grid>
         <Border CornerRadius="20"/>
-        <TextBox x:Name="con_pass2" Width="500" Height="50" HorizontalAlignment="Center"  Margin="116,290,105,0" VerticalAlignment="Top" FontSize="36" FontFamily="Times New Roman" TextChanged="con_pass2_TextChanged" KeyDown="con_pass2_KeyDown"/>
-        <TextBox x:Name="pass2" Width="500" Height="50" HorizontalAlignment="Center" Margin="116,190,105,0" VerticalAlignment="Top" FontSize="36" FontFamily="Times New Roman" TextChanged="pass2_TextChanged" KeyDown="pass2_KeyDown">
+        <TextBox x:Name="con_pass2" Width="500" Height="50" HorizontalAlignment="Center"  Margin="116,290,105,0" VerticalAlignment="Top" FontSize="36" FontFamily="Times New Roman" TextChanged="con_pass2_TextChanged" KeyDown="con_pass2_KeyDown" MaxLength="20"/>
+        <TextBox x:Name="pass2" Width="500" Height="50" HorizontalAlignment="Center" Margin="116,190,105,0" VerticalAlignment="Top" FontSize="36" FontFamily="Times New Roman" TextChanged="pass2_TextChanged" KeyDown="pass2_KeyDown" MaxLength="20">
         </TextBox>
-        <PasswordBox x:Name="con_pass" Width="500" Height="50" HorizontalAlignment="Center"  Margin="116,290,105,0" VerticalAlignment="Top" FontSize="36" FontFamily="Sitka Text Semibold" IsVisibleChanged="con_pass_IsVisibleChanged" KeyDown="con_pass_KeyDown"/>
-        <PasswordBox x:Name="pass" Width="500" Height="50" HorizontalAlignment="Center" Margin="116,190,105,0" VerticalAlignment="Top" FontSize="36" FontFamily="Times New Roman" IsVisibleChanged="pass_IsVisibleChanged" KeyDown="pass_KeyDown"/>
+        <PasswordBox x:Name="con_pass" Width="500" Height="50" HorizontalAlignment="Center"  Margin="116,290,105,0" VerticalAlignment="Top" FontSize="36" FontFamily="Sitka Text Semibold" IsVisibleChanged="con_pass_IsVisibleChanged" KeyDown="con_pass_KeyDown" MaxLength="20"/>
+        <PasswordBox x:Name="pass" Width="500" Height="50" HorizontalAlignment="Center" Margin="116,190,105,0" VerticalAlignment="Top" FontSize="36" FontFamily="Times New Roman" IsVisibleChanged="pass_IsVisibleChanged" KeyDown="pass_KeyDown" MaxLength="20"/>
         <Label Name="valid_lbl" Width="500" Height="22" Margin="116,240,105,0" VerticalAlignment="Top" FontWeight="Heavy" Foreground="#FFE51E1E" FontSize="10"/>
         <Label Name="login_lbl" Width="200" Height="33" Content="Username *" HorizontalAlignment="Left" Margin="177,57,0,0" VerticalAlignment="Top" FontWeight="Heavy" Foreground="Black" FontSize="20"/>
         <Label Name="parol_lbl" Width="200" Height="33" Content="Password *" HorizontalAlignment="Left" Margin="177,157,0,0" VerticalAlignment="Top" FontWeight="Heavy" Foreground="Black" FontSize="20"/>

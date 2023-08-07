@@ -79,7 +79,6 @@ namespace NewNewProject.Pages
             var query = new ShopSqlQuerys();
 
             query.DeleteShop((int)hh);
-
         }
 
         private void update_Click(object sender, RoutedEventArgs e)

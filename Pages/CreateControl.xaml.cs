@@ -38,6 +38,7 @@ namespace NewNewProject.Pages
             var owner = Properties.Settings.Default.Name;
 
             query.CreateShop(shopName, description, owner);
+            
         }
 
         private void createModel_Loaded(object sender, RoutedEventArgs e)

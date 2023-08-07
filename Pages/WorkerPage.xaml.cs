@@ -28,7 +28,7 @@ namespace NewNewProject.Pages
             InitializeComponent();
         }
 
-        private void read_btn_Click(object sender, RoutedEventArgs e)
+        public void read_btn_Click(object sender, RoutedEventArgs e)
         {
             var query = new ShopSqlQuerys();
             var owner = Properties.Settings.Default.Name;

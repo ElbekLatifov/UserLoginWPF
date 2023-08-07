@@ -59,7 +59,7 @@ namespace NewNewProject.Pages
             }
             var hash = GenerateHash(password);
             query.CreateUser(username, hash);
-            MessageBox.Show("Succesfull");
+            NavigationService.GoBack();
         }
 
         public string GenerateHash(string password)
@@ -74,7 +74,7 @@ namespace NewNewProject.Pages
 
         private bool IsValidPassword(string password)
         {
-            var pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$";
+            var pattern = @"^(?=.*[a-zа-я])(?=.*[A-ZА-Я])(?=.*\d)[А-яa-zA-Z\d]{8,}$";
             if (string.IsNullOrWhiteSpace(password))
                 return false;
             var result = Regex.Match(password, pattern);

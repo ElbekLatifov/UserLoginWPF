@@ -12,8 +12,8 @@
         Background="Transparent">
     <Grid>
         <DockPanel HorizontalAlignment="Center" VerticalAlignment="Top" Background="Aqua" Height="30" Width="850">
-            <Image Width="30" Height="25" Margin="350,0,0,0" Source="/Pages/timer4.png" Stretch="Fill"/>
-            <Label Name="hour_lbl" Content="" Width="22" FontFamily="Haettenschweiler" FontSize="14"/>
+            <Image Width="34" Height="26" Margin="350,0,0,0" Source="/Pages/timer4.png" Stretch="Fill"/>
+            <Label Name="hour_lbl" Content="" Width="22" FontFamily="Haettenschweiler" FontSize="14" FontStretch="Medium"/>
             <Label Content=":" Width="14" FontSize="14" FontFamily="Times New Roman" FontWeight="Bold"/>
             <Label Name="minut_lbl" Content="" Width="20" FontSize="14" FontFamily="Haettenschweiler"/>
             <Label Content=":" Width="13" FontSize="14" FontFamily="Times New Roman" FontWeight="Bold"/>
