@@ -15,5 +15,15 @@
         <Label x:Name="description_lbl" Content="" HorizontalAlignment="Center" Margin="0,72,0,0" VerticalAlignment="Top" Height="35" Width="250" FontSize="18" FontFamily="Bauhaus 93" HorizontalContentAlignment="Center"/>
         <Image x:Name="update_btn" HorizontalAlignment="Left" Height="51" Margin="436,63,0,0" VerticalAlignment="Top" Width="46" Source="/Pages/update.png" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
         <Image x:Name="delete_btn" HorizontalAlignment="Left" Height="40" Margin="498,66,0,0" VerticalAlignment="Top" Width="42" Source="/Pages/delete.png" Cursor="Hand" MouseLeftButtonDown="delete_btn_MouseLeftButtonDown"/>
+        <Image HorizontalAlignment="Left" Height="70" Margin="193,129,0,0" VerticalAlignment="Top" Width="82" Source="/Pages/buy_boy.png"/>
+        <Image HorizontalAlignment="Left" Height="69" Margin="294,129,0,0" VerticalAlignment="Top" Width="75" Source="/Pages/buy_girl.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="67" Margin="43,275,0,0" VerticalAlignment="Top" Width="82" Source="/Pages/buket.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="67" Margin="165,275,0,0" VerticalAlignment="Top" Width="78" Source="/Pages/chocolat.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="67" Margin="297,275,0,0" VerticalAlignment="Top" Width="82" Source="/Pages/cat.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="67" Margin="419,275,0,0" VerticalAlignment="Top" Width="78" Source="/Pages/umbrella.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="67" Margin="44,390,0,0" VerticalAlignment="Top" Width="82" Source="/Pages/chesburber.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="67" Margin="166,390,0,0" VerticalAlignment="Top" Width="78" Source="/Pages/tort.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="67" Margin="298,390,0,0" VerticalAlignment="Top" Width="82" Source="/Pages/serob.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="67" Margin="420,390,0,0" VerticalAlignment="Top" Width="78" Source="/Pages/sprey.png" Stretch="Fill"/>
     </Grid>
 </Page>
