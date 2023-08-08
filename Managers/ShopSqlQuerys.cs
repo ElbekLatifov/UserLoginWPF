@@ -50,18 +50,16 @@ namespace NewNewProject.Managers
         {
             var shop = new Shop();
             var command = conn.CreateCommand();
-            command.CommandText = "SELECT * FROM users WHERE id = @id";
+            command.CommandText = "SELECT * FROM shops WHERE id = @id";
             command.Parameters.AddWithValue("id", id);
             command.Prepare();
             var reader = command.ExecuteReader();
 
-            while (reader.Read())
-            {
-                shop.Id = reader.GetInt32(0);
-                shop.Title = reader.GetString(1);
-                shop.Description = (Profesion)reader.GetInt32(2);
-                shop.OwnerName = reader.GetString(3);
-            }
+            shop.Id = reader.GetInt32(0);
+            shop.Title = reader.GetString(1);
+            shop.Description = (Profesion)reader.GetInt32(2);
+            shop.OwnerName = reader.GetString(3);
+            
             reader.Close();
             return shop;
         }

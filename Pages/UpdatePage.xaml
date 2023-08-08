@@ -1,0 +1,26 @@
+﻿<Page x:Class="NewNewProject.Pages.UpdatePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NewNewProject.Pages"
+      xmlns:gif="http://wpfanimatedgif.codeplex.com"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="545"
+      Title="UpdatePage" Loaded="Page_Loaded">
+
+    <Grid Background="#ffffff">
+        <TextBox x:Name="add_txt" HorizontalAlignment="Left" Margin="123,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="45" FontSize="28" Cursor="Pen" Grid.ColumnSpan="2"/>
+        <Label Content="Shop rename:" FontSize="8" HorizontalAlignment="Left" Height="20" Margin="120,180,0,0" VerticalAlignment="Top" Width="87" Grid.ColumnSpan="2"/>
+        <Label Content="Description:" FontSize="8" HorizontalAlignment="Left" Height="20" Margin="120,250,0,0" VerticalAlignment="Top" Width="87" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="description_combo" HorizontalAlignment="Left" Height="40" Margin="123,270,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2"/>
+        <Button x:Name="update_btn" Background="green" Content="Update" Foreground="Azure" FontSize="24" HorizontalAlignment="Left" Margin="123,365,0,0" VerticalAlignment="Top" Height="50" Width="300" Click="update_btn_Click" FontFamily="Bauhaus 93" Grid.ColumnSpan="2"/>
+        <Image x:Name="update_delay" gif:ImageBehavior.AnimatedSource="/Pages/ZZ5H.gif" HorizontalAlignment="Center" Height="200" Margin="0,110,0,0" VerticalAlignment="Top" Width="200" Stretch="Fill" Visibility="Hidden"/>
+        <Label Content="Last Name: " HorizontalAlignment="Left" Margin="90,26,0,0" VerticalAlignment="Top" Height="39" Width="85"/>
+        <Label Content="Last description: " HorizontalAlignment="Left" Margin="90,84,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="last_name" Content="Label" HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" Height="39" Width="343"/>
+        <Label x:Name="last_discription" Content="Label" HorizontalAlignment="Left" Margin="200,84,0,0" VerticalAlignment="Top" Width="172"/>
+        <Image HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" VerticalAlignment="Top" Width="50" Source="/Pages/340.png" MouseLeftButtonDown="Image_MouseLeftButtonDown" Cursor="Hand"/>
+
+    </Grid>
+</Page>

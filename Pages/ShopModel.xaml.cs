@@ -21,10 +21,9 @@ namespace NewNewProject.Pages
     /// </summary>
     public partial class ShopModel : UserControl
     {
-        public ShopModel(bool isowner = false)
+        public ShopModel()
         {
             InitializeComponent();
-            IsOwner(isowner);
         }
 
         public object labelcha0
@@ -61,31 +60,6 @@ namespace NewNewProject.Pages
             {
                 label_description.Content = value;
             }
-        }
-
-        private void IsOwner(bool isowner)
-        {
-            if (!isowner)
-            {
-                DeleteButton.Visibility = Visibility.Hidden;
-                update.Visibility = Visibility.Hidden;
-            }
-        }
-
-        private void delete_button(object sender, RoutedEventArgs e)
-        {
-            var hh = id.Content;
-
-            var query = new ShopSqlQuerys();
-
-            query.DeleteShop((int)hh);
-        }
-
-        private void update_Click(object sender, RoutedEventArgs e)
-        {
-            var hh = id.Content;
-            var link = new UpdateWindow((int)hh);
-            link.Show();
         }
     }
 }

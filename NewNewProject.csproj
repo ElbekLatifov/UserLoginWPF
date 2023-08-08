@@ -9,22 +9,31 @@
 
   <ItemGroup>
     <None Remove="Pages\1920_1080_201211031216211177368.jpeg" />
+    <None Remove="Pages\340.png" />
     <None Remove="Pages\60689.png" />
+    <None Remove="Pages\delete.png" />
     <None Remove="Pages\eye close.png" />
     <None Remove="Pages\eye open.png" />
+    <None Remove="Pages\update.png" />
+    <None Remove="Pages\ZZ5H.gif" />
     <None Remove="timer4.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.1.0" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Pages\1920_1080_201211031216211177368.jpeg" />
+    <Resource Include="Pages\340.png" />
     <Resource Include="Pages\60689.png" />
+    <Resource Include="Pages\delete.png" />
     <Resource Include="Pages\eye close.png" />
     <Resource Include="Pages\eye open.png" />
     <Resource Include="Pages\timer4.png" />
+    <Resource Include="Pages\update.png" />
+    <Resource Include="Pages\ZZ5H.gif" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,19 @@
+﻿<Page x:Class="NewNewProject.Pages.Experement"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NewNewProject.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="550"
+      Title="Experement"
+      x:Name="ExperementPage">
+
+    <Grid Background="White">
+        <Label x:Name="shopName_lbl" Width="409" Height="67" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="36" FontFamily="Algerian" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Image x:Name="back_btn" HorizontalAlignment="Left" Height="35" Margin="10,10,0,0" VerticalAlignment="Top" Width="41" Source="/Pages/340.png" MouseLeftButtonDown="back_btn_MouseLeftButtonDown" Cursor="Hand"/>
+        <Label x:Name="description_lbl" Content="" HorizontalAlignment="Center" Margin="0,72,0,0" VerticalAlignment="Top" Height="35" Width="250" FontSize="18" FontFamily="Bauhaus 93"/>
+        <Image HorizontalAlignment="Left" Height="51" Margin="436,63,0,0" VerticalAlignment="Top" Width="46" Source="/Pages/update.png" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+        <Image x:Name="delete_btn" HorizontalAlignment="Left" Height="40" Margin="498,66,0,0" VerticalAlignment="Top" Width="42" Source="/Pages/delete.png" Cursor="Hand" MouseLeftButtonDown="delete_btn_MouseLeftButtonDown"/>
+    </Grid>
+</Page>

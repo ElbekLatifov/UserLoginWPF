@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:NewNewProject.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="850"
-      Title="WorkerPage" Loaded="ShopsPage_Loaded_1">
+      Title="WorkerPage">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -39,16 +39,10 @@
             </Grid>
         </Border>
 
-        <Border Background="#ffffff" Grid.Column="1" CornerRadius="0,0,20,20">
+        <Border Background="#ffffff" Grid.Column="1" CornerRadius="0,0,0,0">
 
             <StackPanel>
-                <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Top" >
-                    <ComboBox x:Name="sort_by_description" HorizontalAlignment="Left" Margin="5 0" Height="30" Width="150" SelectionChanged="sort_by_description_Selected" Cursor="IBeam" IsReadOnly="True"/>
-                    <TextBox x:Name="search_txt" Width="300" Height="30" Margin="5 0" FontSize="22" FontFamily="Times New Roman"/>
-                    <Button x:Name="search_btn" Width="65" Height="30" Content="Search" FontSize="15" Click="search_btn_Click" FontFamily="SimSun-ExtB" Background="#FF54F718"/>
-                </StackPanel>
-
-                <ListBox x:Name="shoplists" Height="550"/>
+                <Frame x:Name="Salom" NavigationUIVisibility="Hidden" Height="600" Width="545"/>
             </StackPanel>
 
         </Border>
