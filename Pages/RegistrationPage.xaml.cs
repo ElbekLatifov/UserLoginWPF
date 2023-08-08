@@ -59,7 +59,7 @@ namespace NewNewProject.Pages
             }
             var hash = GenerateHash(password);
             query.CreateUser(username, hash);
-            NavigationService.GoBack();
+            NavigationService.Navigate(new MainMenuPage(true, username, password));
         }
 
         public string GenerateHash(string password)

@@ -24,9 +24,27 @@ namespace NewNewProject.Pages
         private int eye_counter = 0;
         private string password_change = string.Empty;
 
-        public MainMenuPage()
+        public MainMenuPage(bool enter = false, string login = "", string parol = "")
         {
             InitializeComponent();
+            EnterTextBox(enter, login, parol);
+        }
+
+        private void EnterTextBox(bool enter = false, string login = "", string parol = "")
+        {
+            if (enter)
+            {
+                parol_txt.Password = parol;
+                register_txt.Text = login;
+            }
+            else
+            {
+                if (Properties.Settings.Default.RememberMe)
+                {
+                    register_txt.Text = Properties.Settings.Default.Owner;
+                    parol_txt.Password = Properties.Settings.Default.Password;
+                }
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -110,15 +128,6 @@ namespace NewNewProject.Pages
                 eye.Source =
                     new BitmapImage(new Uri("/Pages/eye open.png", UriKind.Relative));
                 eye_counter = 2;
-            }
-        }
-
-        private void MainPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            if (Properties.Settings.Default.RememberMe)
-            {
-                register_txt.Text = Properties.Settings.Default.Owner;
-                parol_txt.Password = Properties.Settings.Default.Password;
             }
         }
 

@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:NewNewProject.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="850"
-      Title="MainMenuPage" Loaded="MainPage_Loaded"
+      Title="MainMenuPage"
       >
 
     <Grid>
