@@ -165,34 +165,38 @@ namespace NewNewProject.Pages
             }
         }
 
-        private void login_txt_KeyDown(object sender, KeyEventArgs e)
+        private void login_txt_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            if (!(e.Key >= Key.D0 && e.Key <= Key.D9 ||
-                e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9 ||
-                e.Key >= Key.A && e.Key <= Key.Z))
+            string pattern = @"^[ЁёА-яa-zA-Z0-9]+$";
+
+            // Create a regular expression object with the pattern
+            Regex regex = new Regex(pattern);
+
+            // Check if the entered text matches the pattern
+            if (!regex.IsMatch(e.Text))
             {
-                e.Handled = true;
+                e.Handled = true; // Ignore the input
             }
         }
 
-        private void pass_KeyDown(object sender, KeyEventArgs e)
+        private void pass2_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            login_txt_KeyDown(sender, e);
+            login_txt_PreviewTextInput(sender, e);
         }
 
-        private void con_pass_KeyDown(object sender, KeyEventArgs e)
+        private void con_pass2_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            login_txt_KeyDown(sender, e);
+            login_txt_PreviewTextInput(sender, e);
         }
 
-        private void pass2_KeyDown(object sender, KeyEventArgs e)
+        private void pass_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            login_txt_KeyDown(sender, e);
+            login_txt_PreviewTextInput(sender, e);
         }
 
-        private void con_pass2_KeyDown(object sender, KeyEventArgs e)
+        private void con_pass_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            login_txt_KeyDown(sender, e);
+            login_txt_PreviewTextInput(sender, e);
         }
     }
 }
