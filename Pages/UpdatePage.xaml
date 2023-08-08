@@ -16,10 +16,10 @@
         <ComboBox x:Name="description_combo" HorizontalAlignment="Left" Height="40" Margin="123,270,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2"/>
         <Button x:Name="update_btn" Background="green" Content="Update" Foreground="Azure" FontSize="24" HorizontalAlignment="Left" Margin="123,365,0,0" VerticalAlignment="Top" Height="50" Width="300" Click="update_btn_Click" FontFamily="Bauhaus 93" Grid.ColumnSpan="2"/>
         <Image x:Name="update_delay" gif:ImageBehavior.AnimatedSource="/Pages/ZZ5H.gif" HorizontalAlignment="Center" Height="200" Margin="0,110,0,0" VerticalAlignment="Top" Width="200" Stretch="Fill" Visibility="Hidden"/>
-        <Label Content="Last Name: " HorizontalAlignment="Left" Margin="90,26,0,0" VerticalAlignment="Top" Height="39" Width="85"/>
-        <Label Content="Last description: " HorizontalAlignment="Left" Margin="90,84,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="last_name" Content="Label" HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" Height="39" Width="343"/>
-        <Label x:Name="last_discription" Content="Label" HorizontalAlignment="Left" Margin="200,84,0,0" VerticalAlignment="Top" Width="172"/>
+        <Label Content="Last Name: " HorizontalAlignment="Left" Margin="90,26,0,0" VerticalAlignment="Top" Height="39" Width="85" FontFamily="Broadway"/>
+        <Label Content="Last description: " HorizontalAlignment="Left" Margin="55,84,0,0" VerticalAlignment="Top" FontFamily="Broadway"/>
+        <Label x:Name="last_name" Content="" HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" Height="27" Width="343" FontFamily="Stencil" FontSize="16"/>
+        <Label x:Name="last_discription" Content="" HorizontalAlignment="Left" Margin="202,84,0,0" VerticalAlignment="Top" Width="172" FontFamily="Stencil"/>
         <Image HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" VerticalAlignment="Top" Width="50" Source="/Pages/340.png" MouseLeftButtonDown="Image_MouseLeftButtonDown" Cursor="Hand"/>
 
     </Grid>

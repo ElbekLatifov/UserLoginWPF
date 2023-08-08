@@ -55,11 +55,13 @@ namespace NewNewProject.Managers
             command.Prepare();
             var reader = command.ExecuteReader();
 
-            shop.Id = reader.GetInt32(0);
-            shop.Title = reader.GetString(1);
-            shop.Description = (Profesion)reader.GetInt32(2);
-            shop.OwnerName = reader.GetString(3);
-            
+            while (reader.Read())
+            {
+                shop.Id = reader.GetInt32(0);
+                shop.Title = reader.GetString(1);
+                shop.Description = (Profesion)reader.GetInt32(2);
+                shop.OwnerName = reader.GetString(3);
+            }
             reader.Close();
             return shop;
         }
@@ -99,8 +101,8 @@ namespace NewNewProject.Managers
         {
             var shops = new List<Shop>();
             var command = conn.CreateCommand();
-            command.CommandText = "SELECT * FROM shops WHERE name = @search OR discription = @search";
-            command.Parameters.AddWithValue("search", search);
+            command.CommandText = "SELECT * FROM shops WHERE name LIKE @search";
+            command.Parameters.AddWithValue("search", "%" + search + "%");
             command.Prepare();
             var reader = command.ExecuteReader();
 

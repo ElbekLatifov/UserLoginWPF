@@ -11,7 +11,8 @@
     <Grid Background="#ffffff">
         <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Top" >
             <ComboBox x:Name="sort_by_description" HorizontalAlignment="Left" Margin="5 0" Height="30" Width="150" SelectionChanged="sort_by_description_Selected" Cursor="IBeam" IsReadOnly="True"/>
-            <TextBox x:Name="search_txt" Width="300" Height="30" Margin="5 0" FontSize="22" FontFamily="Times New Roman"/>
+            <Image Height="20" Width="20" Source="/Pages/poisk.png"/>
+            <TextBox x:Name="search_txt" Width="280" Height="30" Margin="5 0" FontSize="22" FontFamily="Times New Roman"/>
             <Button x:Name="search_btn" Width="65" Height="30" Content="Search" FontSize="15" Click="search_btn_Click" FontFamily="SimSun-ExtB" Background="#FF54F718"/>
         </StackPanel>
         <ListBox x:Name="shoplists" SelectionChanged="shoplists_SelectionChanged" Height="550" VerticalAlignment="Bottom">

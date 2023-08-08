@@ -11,7 +11,7 @@
     <Setting Name="RememberMe" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Gost" Type="System.String" Scope="User">
+    <Setting Name="Owner" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

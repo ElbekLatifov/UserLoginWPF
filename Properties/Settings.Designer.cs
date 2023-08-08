@@ -62,12 +62,12 @@ namespace NewNewProject.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Gost {
+        public string Owner {
             get {
-                return ((string)(this["Gost"]));
+                return ((string)(this["Owner"]));
             }
             set {
-                this["Gost"] = value;
+                this["Owner"] = value;
             }
         }
     }

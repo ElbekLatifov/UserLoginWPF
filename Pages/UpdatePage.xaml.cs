@@ -24,10 +24,14 @@ namespace NewNewProject.Pages
     public partial class UpdatePage : Page
     {
         private int _id;
-        public UpdatePage(int id)
+        public UpdatePage(int id, string lastname, Profesion lastdes)
         {
             InitializeComponent();
             _id = id;
+            last_name.Content = lastname;
+            last_discription.Content = lastdes;
+            add_txt.Text = lastname;
+            description_combo.SelectedIndex = (int)(Profesion)lastdes;
         }
 
         private async void update_btn_Click(object sender, RoutedEventArgs e)
@@ -46,7 +50,7 @@ namespace NewNewProject.Pages
             try
             {
                 query.UpdateShop(_id, shopName, description);
-                NavigationService.Navigate(new Experement(_id));
+                NavigationService.Navigate(new Experement(_id, true));
             }
             catch (Exception ex)
             {

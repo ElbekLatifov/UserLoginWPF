@@ -19,6 +19,12 @@ namespace NewNewProject.Pages
         public WorkerPage()
         {
             InitializeComponent();
+            Load();
+        }
+
+        private void Load()
+        {
+            Salom.Navigate(new ShopsPage(allShops: true));
         }
 
         public void read_btn_Click(object sender, RoutedEventArgs e)
@@ -51,6 +57,15 @@ namespace NewNewProject.Pages
         private void myshops_btn_Click(object sender, RoutedEventArgs e)
         {
             Salom.Navigate(new ShopsPage(myShops : true));
+        }
+
+        private void Button_Click_1(object sender, MouseButtonEventArgs e)
+        {
+            var username = Properties.Settings.Default.Name;
+            var query = new UserSqlQuerys();
+
+            query.DeleteUser(username);
+            NavigationService.Navigate(new MainMenuPage());
         }
     }
 }

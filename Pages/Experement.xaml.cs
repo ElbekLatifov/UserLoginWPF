@@ -1,4 +1,5 @@
 ﻿using NewNewProject.Managers;
+using NewNewProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +23,21 @@ namespace NewNewProject.Pages
     public partial class Experement : Page
     {
         private int _id;
-        public Experement(int id)
+        public Experement(int id, bool isOwner = false)
         {
             InitializeComponent();
             _id = id;
             Load(id);
+            CheckOwner(isOwner);
+        }
+
+        private void CheckOwner(bool  isOwner)
+        {
+            if (!isOwner)
+            {
+                delete_btn.Visibility = Visibility.Hidden;
+                update_btn.Visibility= Visibility.Hidden;
+            }
         }
 
         private void Load(int id)
@@ -35,6 +46,7 @@ namespace NewNewProject.Pages
             var shops = query.GetShops();
             var shop = shops.Where(p=>p.Id == id).First();
             shopName_lbl.Content = shop.Title;
+            description_lbl.Content = shop.Description;
         }
 
         private void back_btn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -47,12 +59,14 @@ namespace NewNewProject.Pages
             var query = new ShopSqlQuerys();
 
             query.DeleteShop(_id);
-            NavigationService.Navigate(new ShopsPage(myShops: true));
+            NavigationService.Navigate(new ShopsPage(allShops: true));
         }
 
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            NavigationService.Navigate(new UpdatePage(_id));
+            var lastName = shopName_lbl.Content;
+            var lastDes = description_lbl.Content;
+            NavigationService.Navigate(new UpdatePage(_id, lastName.ToString(), (Profesion)lastDes));
         }
     }
 }

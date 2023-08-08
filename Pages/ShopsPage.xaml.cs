@@ -88,7 +88,12 @@ namespace NewNewProject.Pages
         {
             var selected = shoplists.SelectedItem as ShopModel;
             var id = (int)selected!.labelcha0;
-            NavigationService.Navigate(new Experement(id));
+
+            var query = new ShopSqlQuerys();
+            var shop = query.GetShop(id);
+            var username = Properties.Settings.Default.Name;
+
+            NavigationService.Navigate(new Experement(id, shop.OwnerName == username));
         }
 
         private void sort_by_description_Selected(object sender, SelectionChangedEventArgs e)

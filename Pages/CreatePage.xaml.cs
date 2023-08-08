@@ -51,5 +51,10 @@ namespace NewNewProject.Pages
             var items = new List<Enum>() { Profesion.Natural, Profesion.HouseholdUtensils, Profesion.Clothes, Profesion.Technical, Profesion.Medicine, Profesion.Food };
             description_combo.ItemsSource = items;
         }
+
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 }

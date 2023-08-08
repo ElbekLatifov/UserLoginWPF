@@ -63,6 +63,15 @@ namespace NewNewProject.Managers
             return user;
         }
 
+        public void DeleteUser(string username)
+        {
+            var command = conn.CreateCommand();
+            command.CommandText = "DELETE FROM users WHERE name = @username";
+            command.Parameters.AddWithValue("username", username);
+            command.Prepare();
+            command.ExecuteNonQuery();
+        }
+
         public bool CheckUser(string username)
         {
             var user = new User();

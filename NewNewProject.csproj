@@ -14,6 +14,11 @@
     <None Remove="Pages\delete.png" />
     <None Remove="Pages\eye close.png" />
     <None Remove="Pages\eye open.png" />
+    <None Remove="Pages\isLike.png" />
+    <None Remove="Pages\Like.png" />
+    <None Remove="Pages\logout.png" />
+    <None Remove="Pages\personal.png" />
+    <None Remove="Pages\poisk.png" />
     <None Remove="Pages\update.png" />
     <None Remove="Pages\ZZ5H.gif" />
     <None Remove="timer4.png" />
@@ -31,6 +36,11 @@
     <Resource Include="Pages\delete.png" />
     <Resource Include="Pages\eye close.png" />
     <Resource Include="Pages\eye open.png" />
+    <Resource Include="Pages\isLike.png" />
+    <Resource Include="Pages\Like.png" />
+    <Resource Include="Pages\logout.png" />
+    <Resource Include="Pages\personal.png" />
+    <Resource Include="Pages\poisk.png" />
     <Resource Include="Pages\timer4.png" />
     <Resource Include="Pages\update.png" />
     <Resource Include="Pages\ZZ5H.gif" />

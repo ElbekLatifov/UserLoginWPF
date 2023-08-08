@@ -62,15 +62,14 @@ namespace NewNewProject.Pages
                         if ((bool)checkMe.IsChecked!)
                         {
                             Properties.Settings.Default.Password = password;
-                            Properties.Settings.Default.Name = username;
+                            Properties.Settings.Default.Owner = username;
                             Properties.Settings.Default.RememberMe = true;
                             Properties.Settings.Default.Save();
+                            Properties.Settings.Default.Name = username;
                         }
                         else
                         {
-                            Properties.Settings.Default.Password = password;
                             Properties.Settings.Default.Name = username;
-                            Properties.Settings.Default.Save();
                         }
                         MainPage.NavigationService.Navigate(new WorkerPage());
                     }
@@ -118,7 +117,7 @@ namespace NewNewProject.Pages
         {
             if (Properties.Settings.Default.RememberMe)
             {
-                register_txt.Text = Properties.Settings.Default.Name;
+                register_txt.Text = Properties.Settings.Default.Owner;
                 parol_txt.Password = Properties.Settings.Default.Password;
             }
         }
