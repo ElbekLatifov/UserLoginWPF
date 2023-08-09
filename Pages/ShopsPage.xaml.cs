@@ -148,7 +148,7 @@ namespace NewNewProject.Pages
         private void Page_Loaded_1(object sender, RoutedEventArgs e)
         {
             var sources = new List<Enum>()
-            { Profesion.Natural, Profesion.HouseholdUtensils, Profesion.Clothes, Profesion.Technical, Profesion.Food, Profesion.Medicine};
+            { Profesion.Food, Profesion.HouseholdUtensils, Profesion.Clothes, Profesion.Technical, Profesion.Natural, Profesion.Medicine};
             sort_by_description.ItemsSource = sources;
         }
     }

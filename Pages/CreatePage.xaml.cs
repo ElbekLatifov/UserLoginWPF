@@ -48,7 +48,7 @@ namespace NewNewProject.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var items = new List<Enum>() { Profesion.Natural, Profesion.HouseholdUtensils, Profesion.Clothes, Profesion.Technical, Profesion.Medicine, Profesion.Food };
+            var items = new List<Enum>() { Profesion.Food, Profesion.HouseholdUtensils, Profesion.Clothes, Profesion.Technical, Profesion.Natural, Profesion.Medicine };
             description_combo.ItemsSource = items;
         }
 
