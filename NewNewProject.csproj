@@ -8,26 +8,30 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Pages\1920_1080_201211031216211177368.jpeg" />
     <None Remove="Pages\340.png" />
     <None Remove="Pages\60689.png" />
     <None Remove="Pages\buket.png" />
-    <None Remove="Pages\buy_boy.png" />
-    <None Remove="Pages\buy_girl.png" />
     <None Remove="Pages\cat.png" />
+    <None Remove="Pages\chat.png" />
     <None Remove="Pages\chesburber.png" />
     <None Remove="Pages\chocolat.png" />
     <None Remove="Pages\delete.png" />
     <None Remove="Pages\eye close.png" />
     <None Remove="Pages\eye open.png" />
-    <None Remove="Pages\isLike.png" />
+    <None Remove="Pages\isnolike.png" />
     <None Remove="Pages\itsyourday.png" />
     <None Remove="Pages\Like.png" />
+    <None Remove="Pages\liky.png" />
+    <None Remove="Pages\location.png" />
     <None Remove="Pages\logout.png" />
+    <None Remove="Pages\nolike.png" />
     <None Remove="Pages\personal.png" />
+    <None Remove="Pages\podelitsa.png" />
     <None Remove="Pages\poisk.png" />
+    <None Remove="Pages\savat.png" />
     <None Remove="Pages\serob.png" />
     <None Remove="Pages\sprey.png" />
+    <None Remove="Pages\tel.png" />
     <None Remove="Pages\tort.png" />
     <None Remove="Pages\umbrella.png" />
     <None Remove="Pages\update.png" />
@@ -41,26 +45,30 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Pages\1920_1080_201211031216211177368.jpeg" />
     <Resource Include="Pages\340.png" />
     <Resource Include="Pages\60689.png" />
     <Resource Include="Pages\buket.png" />
-    <Resource Include="Pages\buy_boy.png" />
-    <Resource Include="Pages\buy_girl.png" />
     <Resource Include="Pages\cat.png" />
+    <Resource Include="Pages\chat.png" />
     <Resource Include="Pages\chesburber.png" />
     <Resource Include="Pages\chocolat.png" />
     <Resource Include="Pages\delete.png" />
     <Resource Include="Pages\eye close.png" />
     <Resource Include="Pages\eye open.png" />
-    <Resource Include="Pages\isLike.png" />
+    <Resource Include="Pages\isnolike.png" />
     <Resource Include="Pages\itsyourday.png" />
     <Resource Include="Pages\Like.png" />
+    <Resource Include="Pages\liky.png" />
+    <Resource Include="Pages\location.png" />
     <Resource Include="Pages\logout.png" />
+    <Resource Include="Pages\nolike.png" />
     <Resource Include="Pages\personal.png" />
+    <Resource Include="Pages\podelitsa.png" />
     <Resource Include="Pages\poisk.png" />
+    <Resource Include="Pages\savat.png" />
     <Resource Include="Pages\serob.png" />
     <Resource Include="Pages\sprey.png" />
+    <Resource Include="Pages\tel.png" />
     <Resource Include="Pages\timer4.png" />
     <Resource Include="Pages\tort.png" />
     <Resource Include="Pages\umbrella.png" />

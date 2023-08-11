@@ -101,8 +101,14 @@ namespace NewNewProject.Pages
             var _eNum = sort_by_description.SelectedItem;
             List<ShopModel> shopModels = new List<ShopModel>();
             var query = new ShopSqlQuerys();
+            var shops = new List<Shop>();
 
-            var shops = query.SelectResult((int)_eNum);
+            if (sort_by_description.SelectedIndex == 6)
+            {
+                shops = query.GetShops();
+            }
+            else
+                shops = query.SelectResult((int)_eNum);
 
             foreach (var shop in shops)
             {
@@ -148,8 +154,13 @@ namespace NewNewProject.Pages
         private void Page_Loaded_1(object sender, RoutedEventArgs e)
         {
             var sources = new List<Enum>()
-            { Profesion.Food, Profesion.HouseholdUtensils, Profesion.Clothes, Profesion.Technical, Profesion.Natural, Profesion.Medicine};
+            {Profesion.Food, Profesion.HouseholdUtensils, Profesion.Clothes, Profesion.Technical, Profesion.Natural, Profesion.Medicine, Profesion.All};
             sort_by_description.ItemsSource = sources;
+        }
+
+        private void sort_by_description_Selected_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

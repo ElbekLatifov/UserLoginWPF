@@ -10,22 +10,42 @@
       >
 
     <Grid>
-        <Border Background="#FFB4BEB4" CornerRadius="0" Cursor="">
+        <Border Background="Yellow" CornerRadius="0" Cursor="">
             <Image HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Margin="5,5,0,0" Source="/Pages/itsyourday.png"/>
         </Border>
-        <Label Content="Login" HorizontalAlignment="Left" Width="160" Height="40" VerticalAlignment="Top" Margin="60,170,0,0" FontSize="20" Padding="50,0,0,0"/>
-        <Label Content="Password" HorizontalAlignment="Left" Width="160" Height="40" VerticalAlignment="Top" Margin="60,240,0,0" FontSize="20" Padding="50,0,0,0"/>
-        <TextBox x:Name="parol_tx" HorizontalAlignment="Left" Height="50" Margin="227,233,0,0" VerticalAlignment="Top" Width="410" MaxLength="20" FontSize="38" FontFamily="Times New Roman" TextChanged="parol_tx_TextChanged"/>
-        <PasswordBox x:Name="parol_txt" HorizontalAlignment="Left" Height="50" Margin="227,233,0,0" VerticalAlignment="Top" Width="410" PasswordChar="*" MaxLength="20" FontSize="36" AllowDrop="True" IsVisibleChanged="parol_txt_IsVisibleChanged"/>
-        <Label Content="Welcome" HorizontalAlignment="Left" Height="57" Margin="327,77,0,0" VerticalAlignment="Top" Width="215" Background="#FF50C87A" FontSize="36" HorizontalContentAlignment="Center" FontFamily="Tempus Sans ITC" >
+        <Label Content="Login" HorizontalAlignment="Left" Width="160" Height="40" VerticalAlignment="Top" Margin="60,170,0,0" FontSize="20" Padding="50,0,0,0" Foreground="Black">
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
+        <Label Content="Password" HorizontalAlignment="Left" Width="160" Height="40" VerticalAlignment="Top" Margin="60,240,0,0" FontSize="20" Padding="50,0,0,0" Background="Transparent" Foreground="Black">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="parol_tx" HorizontalAlignment="Left" Height="50" Margin="227,233,0,0" VerticalAlignment="Top" Width="410" MaxLength="20" FontSize="38" FontFamily="Times New Roman" TextChanged="parol_tx_TextChanged"/>
+        <PasswordBox x:Name="parol_txt" HorizontalAlignment="Left" Height="50" Margin="227,233,0,0" VerticalAlignment="Top" Width="410" PasswordChar="*" MaxLength="20" FontSize="36" AllowDrop="True" IsVisibleChanged="parol_txt_IsVisibleChanged"/>
+        <Label Content="Welcome" HorizontalAlignment="Left" Height="63" Margin="327,76,0,0" VerticalAlignment="Top" Width="215" Background="Yellow" FontSize="48" HorizontalContentAlignment="Center" FontFamily="Tempus Sans ITC" />
         <TextBox x:Name="register_txt" HorizontalAlignment="Left" Margin="226,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="50" FontSize="38" FontFamily="Times New Roman" HorizontalContentAlignment="Left"/>
-        <Button x:Name="enter_btn" Content="Enter" Background="Lime" HorizontalAlignment="Left" Height="73" Margin="275,341,0,0" VerticalAlignment="Top" Width="310" FontSize="48" BorderBrush="#FF26F9FA" Click="enter_btn_Click" FontFamily="Snap ITC" >
+        <Button x:Name="enter_btn" Content="Enter" Background="Black" HorizontalAlignment="Left" Height="73" Margin="275,341,0,0" VerticalAlignment="Top" Width="310" FontSize="48" BorderBrush="Black" Click="enter_btn_Click" FontFamily="Bauhaus 93" RenderTransformOrigin="0,0" Foreground="White" >
+            <Button.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.LayoutTransform>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0" AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
         </Button>
-        <Button Content="Registration" HorizontalAlignment="Center" Background="#FFB4BEB4"  Margin="0,512,0,0" VerticalAlignment="Top" Width="158" Height="35" FontSize="24" Click="Button_Click" FontFamily="Blackadder ITC" BorderBrush="#FFB4BEB4"/>
+        <Button Content="Registration" HorizontalAlignment="Left" Background="Yellow"  Margin="682,21,0,0" VerticalAlignment="Top" Width="158" Height="35" FontSize="24" Click="Button_Click" FontFamily="Impact" BorderBrush="Yellow"/>
         <CheckBox x:Name="checkMe" Content="Remember me" HorizontalAlignment="Left" Height="21" Margin="227,300,0,0" VerticalAlignment="Top" Width="99"/>
         <Image x:Name="eye" HorizontalAlignment="Left" Height="35" Margin="597,241,0,0" VerticalAlignment="Top" Width="36" Source="/Pages/eye open.png" Stretch="Fill" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
     </Grid>

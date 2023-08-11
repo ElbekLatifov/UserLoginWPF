@@ -10,13 +10,11 @@
       x:Name="ExperementPage">
 
     <Grid Background="White">
-        <Label x:Name="shopName_lbl" Width="409" Height="67" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="36" FontFamily="Algerian" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="shopName_lbl" Width="409" Height="67" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="24" FontFamily="Times New Roman" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
         <Image x:Name="back_btn" HorizontalAlignment="Left" Height="35" Margin="10,10,0,0" VerticalAlignment="Top" Width="41" Source="/Pages/340.png" MouseLeftButtonDown="back_btn_MouseLeftButtonDown" Cursor="Hand"/>
-        <Label x:Name="description_lbl" Content="" HorizontalAlignment="Center" Margin="0,72,0,0" VerticalAlignment="Top" Height="35" Width="250" FontSize="18" FontFamily="Bauhaus 93" HorizontalContentAlignment="Center"/>
+        <Label x:Name="description_lbl" Content="" HorizontalAlignment="Center" Margin="0,72,0,0" VerticalAlignment="Top" Height="35" Width="250" FontSize="16" FontFamily="Bauhaus 93" HorizontalContentAlignment="Center"/>
         <Image x:Name="update_btn" HorizontalAlignment="Left" Height="51" Margin="436,63,0,0" VerticalAlignment="Top" Width="46" Source="/Pages/update.png" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
         <Image x:Name="delete_btn" HorizontalAlignment="Left" Height="40" Margin="498,66,0,0" VerticalAlignment="Top" Width="42" Source="/Pages/delete.png" Cursor="Hand" MouseLeftButtonDown="delete_btn_MouseLeftButtonDown"/>
-        <Image HorizontalAlignment="Left" Height="70" Margin="193,129,0,0" VerticalAlignment="Top" Width="82" Source="/Pages/buy_boy.png"/>
-        <Image HorizontalAlignment="Left" Height="69" Margin="294,129,0,0" VerticalAlignment="Top" Width="75" Source="/Pages/buy_girl.png" Stretch="Fill"/>
         <Image HorizontalAlignment="Left" Height="67" Margin="43,275,0,0" VerticalAlignment="Top" Width="82" Source="/Pages/buket.png" Stretch="Fill"/>
         <Image HorizontalAlignment="Left" Height="67" Margin="165,275,0,0" VerticalAlignment="Top" Width="78" Source="/Pages/chocolat.png" Stretch="Fill"/>
         <Image HorizontalAlignment="Left" Height="67" Margin="297,275,0,0" VerticalAlignment="Top" Width="82" Source="/Pages/cat.png" Stretch="Fill"/>
@@ -25,5 +23,12 @@
         <Image HorizontalAlignment="Left" Height="67" Margin="166,390,0,0" VerticalAlignment="Top" Width="78" Source="/Pages/tort.png" Stretch="Fill"/>
         <Image HorizontalAlignment="Left" Height="67" Margin="298,390,0,0" VerticalAlignment="Top" Width="82" Source="/Pages/serob.png" Stretch="Fill"/>
         <Image HorizontalAlignment="Left" Height="67" Margin="420,390,0,0" VerticalAlignment="Top" Width="78" Source="/Pages/sprey.png" Stretch="Fill"/>
+        <Image x:Name="isLike_btn" HorizontalAlignment="Left" Height="62" Margin="96,128,0,0" VerticalAlignment="Top" Width="59" Source="/Pages/isnolike.png" MouseLeftButtonDown="isLike_btn_MouseLeftButtonDown" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="34" Margin="319,145,0,0" VerticalAlignment="Top" Width="28" Source="/Pages/podelitsa.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="30" Margin="359,149,0,0" VerticalAlignment="Top" Width="30" Source="/Pages/location.png"/>
+        <Image HorizontalAlignment="Left" Height="31" Margin="409,150,0,0" VerticalAlignment="Top" Width="30" Source="/Pages/chat.png"/>
+        <Image HorizontalAlignment="Left" Height="33" Margin="461,148,0,0" VerticalAlignment="Top" Width="26" Source="/Pages/tel.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="32" Margin="507,150,0,0" VerticalAlignment="Top" Width="33" Source="/Pages/savat.png" Stretch="Fill"/>
+        <Image x:Name="isLike_btn_Copy" HorizontalAlignment="Left" Height="61" Margin="12,128,0,0" VerticalAlignment="Top" Width="59" Source="/Pages/liky.png" MouseLeftButtonDown="isLike_btn_Copy_MouseLeftButtonDown" Stretch="Fill"/>
     </Grid>
 </Page>

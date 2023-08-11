@@ -30,7 +30,7 @@ namespace NewNewProject.Pages
         private async void add_btn_Click(object sender, RoutedEventArgs e)
         {
             gif_image.Visibility = Visibility.Visible;
-            await Task.Delay(1000);
+            await Task.Delay(700);
             gif_image.Visibility = Visibility.Hidden;
 
             var shopName = add_txt.Text;

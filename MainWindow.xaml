@@ -11,14 +11,14 @@
         WindowStyle="None"
         Background="Transparent">
     <Grid>
-        <DockPanel HorizontalAlignment="Center" VerticalAlignment="Top" Background="Aqua" Height="30" Width="850">
+        <DockPanel HorizontalAlignment="Center" VerticalAlignment="Top" Background="Blue" Height="30" Width="850" MouseDown="DockPanel_MouseDown">
             <Image Width="34" Height="26" Margin="350,0,0,0" Source="/Pages/timer4.png" Stretch="Fill"/>
-            <Label Name="hour_lbl" Content="" Width="22" FontFamily="Haettenschweiler" FontSize="14" FontStretch="Medium"/>
+            <Label Name="hour_lbl" Content="" Width="22" FontFamily="Haettenschweiler" FontSize="14" FontStretch="Medium" FontWeight="Bold"/>
             <Label Content=":" Width="14" FontSize="14" FontFamily="Times New Roman" FontWeight="Bold"/>
-            <Label Name="minut_lbl" Content="" Width="20" FontSize="14" FontFamily="Haettenschweiler"/>
+            <Label Name="minut_lbl" Content="" Width="20" FontSize="14" FontFamily="Haettenschweiler" FontWeight="Bold"/>
             <Label Content=":" Width="13" FontSize="14" FontFamily="Times New Roman" FontWeight="Bold"/>
-            <Label Name="second_lbl" Content="" Width="21" FontSize="14" FontFamily="Haettenschweiler"/>
-            <Button Content="X" Click="Page1_Click" Height="30" Width="40" HorizontalAlignment="Right" Background="red" FontSize="20" FontFamily="Engravers MT" FontWeight="Bold" Cursor="Hand"/>
+            <Label Name="second_lbl" Content="" Width="21" FontSize="14" FontFamily="Haettenschweiler" FontWeight="Bold"/>
+            <Button x:Name="exit_btn" Content="X" Click="Page1_Click" Height="30" Width="40" HorizontalAlignment="Right" Background="Blue" FontSize="20" FontFamily="Engravers MT" FontWeight="Bold" Cursor="Hand" MouseEnter="exit_btn_MouseEnter" MouseLeave="exit_btn_MouseLeave" BorderBrush="Blue"/>
         </DockPanel>
         <Frame x:Name="mainframe" Margin="0,30,0,0" NavigationUIVisibility="Hidden"/>
     </Grid>

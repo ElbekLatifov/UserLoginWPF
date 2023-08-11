@@ -8,7 +8,7 @@
              d:DesignHeight="50" d:DesignWidth="530"
              Background="Aquamarine" Cursor="Hand">
     <Grid>
-        <Label x:Name="label_name" Content="Title" HorizontalAlignment="Left" Height="30" Margin="43,0,0,0" VerticalAlignment="Center" Width="339" FontFamily="Wide Latin" HorizontalContentAlignment="Center"/>
+        <Label x:Name="label_name" Content="Title" HorizontalAlignment="Left" Height="30" Margin="43,0,0,0" VerticalAlignment="Center" Width="339" FontFamily="Elephant" HorizontalContentAlignment="Center"/>
         <Label x:Name="label_description" Content="Description" FontStyle="Italic" HorizontalAlignment="Left" Height="30" Margin="387,0,0,0" VerticalAlignment="Center" Width="127" FontFamily="Bauhaus 93" Cursor="" HorizontalContentAlignment="Center"/>
         <Label x:Name="id" Content="Id" HorizontalAlignment="Left" Height="30" Margin="1,0,0,0" VerticalAlignment="Center" Width="37" FontFamily="Algerian" FontWeight="Bold" HorizontalContentAlignment="Center"/>
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Google.Protobuf.WellKnownTypes;
+using Microsoft.Win32;
 using NewNewProject.Managers;
 using NewNewProject.Models;
 using System;
@@ -59,9 +60,17 @@ namespace NewNewProject.Pages
             Salom.Navigate(new ShopsPage(myShops : true));
         }
 
-        private void Button_Click_1(object sender, MouseButtonEventArgs e)
+        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var username = Properties.Settings.Default.Name;
+            var owner = Properties.Settings.Default.Owner;
+            if(username == owner)
+            {
+                Properties.Settings.Default.RememberMe = false;
+                Properties.Settings.Default.Owner = string.Empty;
+                Properties.Settings.Default.Password = string.Empty;
+                Properties.Settings.Default.Save();
+            }
             var query = new UserSqlQuerys();
 
             query.DeleteUser(username);

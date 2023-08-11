@@ -37,7 +37,7 @@ namespace NewNewProject.Pages
         private async void update_btn_Click(object sender, RoutedEventArgs e)
         {
             update_delay.Visibility = Visibility.Visible;
-            await Task.Delay(1000);
+            await Task.Delay(700);
             update_delay.Visibility=Visibility.Hidden;
 
             var shopName = add_txt.Text;

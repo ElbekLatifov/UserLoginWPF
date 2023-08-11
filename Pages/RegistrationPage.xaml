@@ -10,7 +10,7 @@
       Background="White">
 
     <Grid>
-        <Border CornerRadius="20"/>
+        <Border Background="Yellow"/>
         <TextBox x:Name="con_pass2" Width="500" Height="50" HorizontalAlignment="Center"  Margin="116,290,105,0" VerticalAlignment="Top" FontSize="36" FontFamily="Times New Roman" TextChanged="con_pass2_TextChanged" MaxLength="20" PreviewTextInput="con_pass2_PreviewTextInput"/>
         <TextBox x:Name="pass2" Width="500" Height="50" HorizontalAlignment="Center" Margin="116,190,105,0" VerticalAlignment="Top" FontSize="36" FontFamily="Times New Roman" TextChanged="pass2_TextChanged" MaxLength="20" PreviewTextInput="pass2_PreviewTextInput"/>
         <PasswordBox x:Name="con_pass" Width="500" Height="50" HorizontalAlignment="Center"  Margin="116,290,105,0" VerticalAlignment="Top" FontSize="36" FontFamily="Sitka Text Semibold" IsVisibleChanged="con_pass_IsVisibleChanged" MaxLength="20" PreviewTextInput="con_pass_PreviewTextInput"/>
@@ -20,8 +20,8 @@
         <Label Name="parol_lbl" Width="200" Height="33" Content="Password *" HorizontalAlignment="Left" Margin="177,157,0,0" VerticalAlignment="Top" FontWeight="Heavy" Foreground="Black" FontSize="20"/>
         <Label Name="conf_parol_lbl" Width="237" Height="35" Content="Enter Password again *" HorizontalAlignment="Left" Margin="177,257,0,0" VerticalAlignment="Top" FontWeight="Heavy" Foreground="Black" FontSize="20"/>
         <TextBox x:Name="login_txt" Width="500" Height="50" Margin="116,90,105,0" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="35" PreviewTextInput="login_txt_PreviewTextInput"/>
-        <Button  x:Name="reg_btn" Width="500" Height="90" Background="Moccasin" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="116,0,115,120" Content="Submit" FontSize="50" Click="reg_btn_Click" FontFamily="Snap ITC"/>
-        <Button Content="Back" FontSize="20" BorderBrush="Cyan" Background="Honeydew" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="81" Click="Button_Click" FontFamily="Showcard Gothic"/>
+        <Button  x:Name="reg_btn" Width="500" Height="90" Background="Black" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="116,0,115,120" Content="Registration" FontSize="50" Click="reg_btn_Click" FontFamily="Algerian" BorderBrush="Black" Foreground="White"/>
+        <Button Content="Back" FontSize="20" BorderBrush="Yellow" Background="Yellow" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="81" Click="Button_Click" FontFamily="Showcard Gothic"/>
         <Image x:Name="pass_name" HorizontalAlignment="Left" Height="35" Margin="640,197,0,0" VerticalAlignment="Top" Width="35" Source="/Pages/eye open.png" MouseLeftButtonDown="pass_name_MouseLeftButtonDown" />
         <Image x:Name="conpassname" HorizontalAlignment="Left" Height="35" Margin="640,298,0,0" VerticalAlignment="Top" Width="35" Source="/Pages/eye open.png" MouseLeftButtonDown="conpassname_MouseLeftButtonDown"/>
 

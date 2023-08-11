@@ -21,6 +21,7 @@ namespace NewNewProject.Models
         Clothes,
         Technical,
         Natural,
-        Medicine
+        Medicine,
+        All
     }
 }

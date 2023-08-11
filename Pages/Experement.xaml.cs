@@ -23,6 +23,8 @@ namespace NewNewProject.Pages
     public partial class Experement : Page
     {
         private int _id;
+        private int likeCounter = 0;
+        private int nolikeCounter = 0;
         public Experement(int id, bool isOwner = false)
         {
             InitializeComponent();
@@ -67,6 +69,46 @@ namespace NewNewProject.Pages
             var lastName = shopName_lbl.Content;
             var lastDes = description_lbl.Content;
             NavigationService.Navigate(new UpdatePage(_id, lastName.ToString(), (Profesion)lastDes));
+        }
+
+        private void isLike_btn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (nolikeCounter == 2)
+            {
+                nolikeCounter = 0;
+            }
+            if (nolikeCounter == 0)
+            {
+                isLike_btn.Source =
+                    new BitmapImage(new Uri("/Pages/nolike.png", UriKind.Relative));
+                nolikeCounter = 1;
+            }
+            else if (nolikeCounter == 1)
+            {
+                isLike_btn.Source =
+                    new BitmapImage(new Uri("/Pages/isnolike.png", UriKind.Relative));
+                nolikeCounter = 2;
+            }
+        }
+
+        private void isLike_btn_Copy_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (likeCounter == 2)
+            {
+                likeCounter = 0;
+            }
+            if (likeCounter == 0)
+            {
+                isLike_btn_Copy.Source =
+                    new BitmapImage(new Uri("/Pages/Like.png", UriKind.Relative));
+                likeCounter = 1;
+            }
+            else if (likeCounter == 1)
+            {
+                isLike_btn_Copy.Source =
+                    new BitmapImage(new Uri("/Pages/liky.png", UriKind.Relative));
+                likeCounter = 2;
+            }
         }
     }
 }
